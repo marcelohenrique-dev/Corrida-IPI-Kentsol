@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kentsol | Participe do sorteio</title>
+  <meta name="description" content="Participe do sorteio da Kentsol, conheça nossas soluções e fale com um especialista.">
+  <meta name="theme-color" content="#012F50">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#012F50;
+      --blue-2:#083F63;
+      --orange:#F7941D;
+      --white:#fff;
+      --ink:#172A38;
+      --muted:#61717D;
+      --line:#DCE4EA;
+      --soft:#F5F7F9;
+      --wrap:1040px;
+      --body-font:"Source Sans 3","Trebuchet MS",sans-serif;
+      --display-font:"Barlow","Trebuchet MS",sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:24px}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:#F8FAFB;
+      font-family:var(--body-font);
+      font-size:17px;
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{width:min(100% - 32px,var(--wrap));margin:auto}
+    .skip-link{position:absolute;top:-60px;left:16px;z-index:5;padding:10px 14px;background:var(--white);color:var(--blue);font-weight:700}
+    .skip-link:focus{top:12px}
+    .site-header{position:absolute;inset:0 0 auto;z-index:2;background:transparent;color:var(--white)}
+    .nav-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-family:var(--display-font);font-size:1.55rem;font-weight:800;text-decoration:none;line-height:1}
+    .brand span{color:var(--orange)}
+    .nav-links{display:flex;align-items:center;gap:24px}
+    .nav-links a{color:var(--white);font-size:.98rem;font-weight:700;text-decoration:none;text-shadow:0 1px 5px rgba(0,0,0,.65)}
+    .nav-links a:hover{text-decoration:underline;text-underline-offset:5px}
+    a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:50px;padding:11px 22px;border-radius:5px;
+      border:1px solid transparent;text-decoration:none;
+      font-family:var(--body-font);font-weight:700;font-size:1rem;
+      cursor:pointer;transition:background-color .16s ease,color .16s ease,transform .16s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--orange);color:var(--blue)}
+    .btn-primary:hover{background:#FFAB3D}
+    .btn-dark{background:var(--blue);color:var(--white)}
+    .btn-dark:hover{background:var(--blue-2)}
+    .btn-outline{background:transparent;border-color:#AFC0CB;color:var(--white)}
+    .btn-outline:hover{background:var(--white);color:var(--blue)}
+    .hero{
+      position:relative;overflow:hidden;display:flex;align-items:center;
+      min-height:100vh;min-height:100svh;color:var(--white);
+      background-color:var(--blue);
+      background-image:linear-gradient(90deg,rgba(1,29,49,.94) 0%,rgba(1,47,80,.82) 54%,rgba(1,47,80,.5) 100%),url("images/Footer.jpeg");
+      background-size:cover;background-position:center 55%;
+      padding:68px 0 72px;border-bottom:5px solid var(--orange);
+    }
+    .hero-content{max-width:760px}
+    .eyebrow{
+      color:var(--orange);font-family:var(--display-font);font-weight:700;
+      text-transform:uppercase;font-size:.88rem;margin:0 0 12px
+    }
+    h1,h2,h3{margin:0;color:var(--blue);font-family:var(--display-font);line-height:1.12;font-weight:700}
+    h1{max-width:700px;color:var(--white);font-size:48px}
+    .hero p{
+      max-width:620px;margin:16px 0 26px;color:#D7E3EA;
+      font-size:1.15rem
+    }
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .choice-section{padding:54px 0 62px}
+    .section-title{margin-bottom:24px}
+    .section-title h2{font-size:34px}
+    .section-title p{color:var(--muted);margin:8px 0 0;max-width:560px}
+    .choices{
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px
+    }
+    .choice{
+      border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:6px;
+      padding:24px;background:var(--white);display:flex;flex-direction:column;min-height:242px;
+    }
+    .choice.primary{border-top-color:var(--orange)}
+    .choice h3{font-size:23px}
+    .choice p{color:var(--muted);margin:10px 0 22px;flex:1}
+    .choice .btn{width:100%}
+    .final-cta{
+      background:#EAF0F4;border-top:1px solid var(--line);padding:38px 0
+    }
+    .final-cta-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .final-cta h2{font-size:28px}
+    .final-cta p{color:var(--muted);margin:7px 0 0}
+    footer{background:var(--blue);color:#D4E0E8;padding:22px 0;font-size:.95rem}
+    footer strong{color:var(--blue);font-family:var(--display-font);font-size:1.1rem}
+    footer p{margin:4px 0 0}
+    @media(max-width:780px){
+      .choices{grid-template-columns:1fr 1fr}
+      .choice:last-child{grid-column:1 / -1;min-height:0}
+      .final-cta-inner{align-items:flex-start;flex-direction:column}
+    }
+    @media(max-width:560px){
+      .nav-inner{align-items:flex-start;flex-direction:column;justify-content:center;gap:12px;padding:15px 0}
+      .nav-links{gap:18px;flex-wrap:wrap}
+      .hero{min-height:100vh;min-height:100svh;padding:150px 0 48px;background-position:center}
+      h1{font-size:38px}
+      .hero p{font-size:1.08rem}
+      .hero-actions,.hero-actions .btn{width:100%}
+      .choice-section{padding:40px 0 46px}
+      .section-title h2{font-size:30px}
+      .choices{grid-template-columns:1fr}
+      .choice,.choice:last-child{grid-column:auto;min-height:0}
+      .choice .btn{margin-top:4px}
+      .final-cta h2{font-size:25px}
+      .final-cta .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="Kentsol, início">KENT<span>SOL</span></a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="NossosServi%C3%A7os.html">Serviços</a>
+      <a href="sorteio.html">Sorteio</a>
+      <a href="https://wa.me/551733120964?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20a%20Kentsol." target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+  <section class="hero">
+    <div class="wrap hero-content">
+      <div class="eyebrow">Kentsol Aquecedores</div>
+      <h1>Aquecimento e conforto para sua casa e seu projeto</h1>
+      <p>Conheça nossas soluções, fale com a equipe Kentsol ou participe do sorteio.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="sorteio.html">Participar do sorteio</a>
+        <a class="btn btn-outline" href="NossosServi%C3%A7os.html">Ver Serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="choice-section">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Como podemos ajudar você?</h2>
+      </div>
+
+      <div class="choices">
+        <article class="choice primary">
+          <h3>Participar do sorteio</h3>
+          <p>Concorra a um sistema de aquecimento solar para piscina de até 10 m².</p>
+          <a class="btn btn-primary" href="sorteio.html">Quero participar</a>
+        </article>
+
+        <article class="choice">
+          <h3>Conheça nossos serviços</h3>
+          <p>Veja as soluções Kentsol para aquecimento e conforto hidráulico.</p>
+          <a class="btn btn-dark" href="NossosServi%C3%A7os.html">Ver Serviços</a>
+        </article>
+
+        <article class="choice">
+          <h3>Conversar com um especialista</h3>
+          <p>Fale diretamente com a equipe Kentsol pelo WhatsApp.</p>
+          <a class="btn btn-dark" href="https://wa.me/551733120964?text=Ol%C3%A1%21%20Vim%20pelo%20flyer%20da%20corrida%20e%20gostaria%20de%20falar%20com%20a%20Kentsol." target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta" id="contato">
+    <div class="wrap final-cta-inner">
+      <div>
+        <h2>Está planejando um projeto?</h2>
+        <p>Converse com a equipe Kentsol e solicite um orçamento.</p>
+      </div>
+      <a class="btn btn-dark" href="https://wa.me/551733120964?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20Kentsol." target="_blank" rel="noopener">
+        Falar com um especialista
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Kentsol Aquecedores</strong>
+    <p>São José do Rio Preto e região</p>
+  </div>
+</footer>
+
+</body>
+</html>

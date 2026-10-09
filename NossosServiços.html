@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kentsol | Soluções em aquecimento de água</title>
+  <meta name="description" content="Soluções Kentsol em aquecimento solar para banho e piscina, equipamentos e orientação para projetos.">
+  <meta name="theme-color" content="#012F50">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #012F50;
+      --blue-deep: #06263B;
+      --orange: #F7941D;
+      --ink: #172A38;
+      --muted: #61717D;
+      --line: #DCE4EA;
+      --soft: #F5F7F8;
+      --white: #FFFFFF;
+      --wrap: 1200px;
+      --body-font: "Source Sans 3", "Segoe UI", sans-serif;
+      --display-font: "Barlow", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: var(--body-font);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    .wrap { width: min(100% - 48px, var(--wrap)); margin-inline: auto; }
+    .skip-link {
+      position: absolute;
+      top: -60px;
+      left: 16px;
+      z-index: 20;
+      padding: 10px 14px;
+      background: var(--white);
+      color: var(--blue);
+      font-weight: 700;
+    }
+    .skip-link:focus { top: 12px; }
+    a:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+
+    .site-header {
+      position: absolute;
+      inset: 0 0 auto;
+      z-index: 5;
+      color: var(--white);
+      background: linear-gradient(180deg, rgba(3, 24, 37, .55), transparent);
+    }
+    .nav-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .brand {
+      flex: none;
+      color: var(--white);
+      font-family: var(--display-font);
+      font-size: 1.7rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: .025em;
+      text-decoration: none;
+    }
+    .brand span, .footer-brand span { color: var(--orange); }
+    .nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 26px; }
+    .nav-links a {
+      color: var(--white);
+      font-size: .96rem;
+      font-weight: 700;
+      text-decoration: none;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, .35);
+    }
+    .nav-links a:hover { text-decoration: underline; text-underline-offset: 5px; }
+
+    .hero {
+      min-height: min(820px, 92svh);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 128px 0 94px;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(3, 24, 37, .8) 0%, rgba(3, 34, 51, .62) 48%, rgba(3, 34, 51, .13) 100%),
+        url("images/TrocadordeCalor.jpg") center 56% / cover no-repeat;
+    }
+    .hero-copy { max-width: 760px; }
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--orange);
+      font-family: var(--display-font);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      margin: 0;
+      font-family: var(--display-font);
+      font-weight: 700;
+      line-height: 1.08;
+    }
+    h1 {
+      max-width: 740px;
+      color: var(--white);
+      font-size: clamp(3.2rem, 7vw, 6.4rem);
+      letter-spacing: -.045em;
+    }
+    .hero-copy > p {
+      max-width: 600px;
+      margin: 20px 0 28px;
+      color: rgba(255, 255, 255, .91);
+      font-size: clamp(1.08rem, 1.6vw, 1.25rem);
+    }
+    .hero-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 48px;
+      color: var(--white);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .hero-link::after { content: "↓"; color: var(--orange); font-size: 1.3rem; }
+    .hero-link:hover { text-decoration: underline; text-underline-offset: 5px; }
+
+    .service-section {
+      padding: clamp(76px, 10vw, 138px) 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .category-heading {
+      max-width: 760px;
+      margin-bottom: clamp(34px, 5vw, 62px);
+    }
+    .category-heading .eyebrow { color: var(--blue); margin-bottom: 12px; }
+    .category-heading h2 {
+      color: var(--blue);
+      font-size: clamp(2.5rem, 4.3vw, 4.5rem);
+      letter-spacing: -.045em;
+    }
+    .category-heading > p {
+      max-width: 680px;
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 1.09rem;
+    }
+    .equipment-list { display: grid; gap: clamp(38px, 6vw, 76px); }
+    .equipment-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+      align-items: center;
+      gap: clamp(34px, 6vw, 84px);
+    }
+    .equipment-row--reverse .equipment-visual { grid-column: 2; grid-row: 1; }
+    .equipment-row--reverse .equipment-summary { grid-column: 1; grid-row: 1; }
+    .equipment-summary { max-width: 480px; }
+    .equipment-summary .eyebrow { color: var(--blue); margin-bottom: 12px; }
+    .equipment-summary h3 {
+      color: var(--blue);
+      font-size: clamp(1.85rem, 3vw, 2.7rem);
+      letter-spacing: -.045em;
+    }
+    .equipment-summary > p {
+      max-width: 460px;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .equipment-visual { min-width: 0; margin: 0; }
+
+    .equipment-image {
+      min-height: 540px;
+      display: grid;
+      place-items: center;
+      overflow: visible;
+      background: transparent;
+    }
+    .equipment-image img {
+      width: 100%;
+      height: 540px;
+      padding: 0;
+      object-fit: contain;
+      transform-origin: center;
+    }
+    .equipment-visual--boiler .equipment-image { min-height: 560px; }
+    .equipment-visual--boiler .equipment-image img {
+      width: 122%;
+      max-width: none;
+      height: 560px;
+    }
+    .equipment-visual--collector .equipment-image { min-height: 680px; }
+    .equipment-visual--collector .equipment-image img { height: 680px; }
+    .visual-caption {
+      margin: 11px 0 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .bath-support {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px 48px;
+      margin-top: clamp(42px, 6vw, 72px);
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+    .bath-support p { margin: 0; color: var(--muted); }
+    .bath-support strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--blue);
+      font-family: var(--display-font);
+      font-size: 1.2rem;
+    }
+
+    .pool-section { background: var(--soft); }
+    .pool-photo { height: clamp(340px, 38vw, 490px); }
+    .pool-photo img { object-fit: cover; }
+    .pool-list { margin-top: 24px; border-top: 1px solid var(--line); }
+    .pool-list p {
+      margin: 0;
+      padding: 17px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--blue);
+      font-family: var(--display-font);
+      font-size: 1.14rem;
+      font-weight: 700;
+    }
+
+    .electric-section { background: var(--white); }
+    .equipment-photo {
+      min-height: 390px;
+      overflow: hidden;
+      background: #EFF2F3;
+    }
+    .equipment-photo img {
+      width: 100%;
+      height: 390px;
+      object-fit: contain;
+    }
+    .project-copy h2 { color: var(--white); font-size: clamp(2.5rem, 4.3vw, 4.5rem); letter-spacing: -.045em; }
+    .project-copy > p { max-width: 490px; margin: 18px 0 28px; color: rgba(255, 255, 255, .88); font-size: 1.09rem; }
+
+    .projects {
+      padding: clamp(64px, 8vw, 100px) 0;
+      background: var(--blue-deep);
+    }
+    .project-panel {
+      min-height: 590px;
+      display: flex;
+      align-items: end;
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 5vw, 66px);
+      background:
+        linear-gradient(90deg, rgba(3, 24, 37, .74), rgba(3, 24, 37, .08)),
+        url("images/Footer.jpeg") center 52% / cover no-repeat;
+    }
+    .project-copy { max-width: 650px; position: relative; z-index: 1; }
+    .project-copy .eyebrow { color: var(--orange); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 12px 24px;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      background: var(--orange);
+      color: var(--blue);
+      font: 700 1rem var(--body-font);
+      text-align: center;
+      text-decoration: none;
+      transition: background-color .16s ease, transform .16s ease;
+    }
+    .btn:hover { background: #FFAB3D; transform: translateY(-1px); }
+
+    footer { padding: 24px 0; background: var(--blue); color: rgba(255, 255, 255, .82); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .footer-brand { color: var(--white); font-family: var(--display-font); font-size: 1.3rem; font-weight: 800; }
+
+    @media (max-width: 860px) {
+      .wrap { width: min(100% - 40px, var(--wrap)); }
+      .equipment-row { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+      .equipment-row--reverse .equipment-visual,
+      .equipment-row--reverse .equipment-summary { grid-column: auto; grid-row: auto; }
+      .equipment-summary { max-width: 680px; }
+      .equipment-image, .equipment-image img { min-height: 460px; height: 460px; }
+      .equipment-visual--boiler .equipment-image,
+      .equipment-visual--boiler .equipment-image img { min-height: 480px; height: 480px; }
+      .equipment-visual--boiler .equipment-image img { width: 100%; max-width: 100%; }
+      .equipment-visual--collector .equipment-image,
+      .equipment-visual--collector .equipment-image img { min-height: 560px; height: 560px; }
+      .equipment-photo, .equipment-photo img { min-height: 360px; height: 360px; }
+      .pool-photo { height: 380px; }
+      .project-panel { min-height: 520px; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 36px, var(--wrap)); }
+      .site-header { background: rgba(3, 24, 37, .38); }
+      .nav-inner { min-height: 0; align-items: flex-start; flex-direction: column; gap: 13px; padding: 16px 0; }
+      .brand { font-size: 1.5rem; }
+      .nav-links { gap: 8px 16px; }
+      .nav-links a { font-size: .88rem; }
+      .hero { min-height: 700px; min-height: 88svh; padding: 168px 0 70px; background-position: 57% center; }
+      h1 { font-size: clamp(3rem, 13vw, 4.4rem); }
+      .hero-copy > p { font-size: 1.04rem; }
+      .service-section { padding: 74px 0; }
+      .category-heading h2, .project-copy h2 { font-size: clamp(2.5rem, 11vw, 3.5rem); }
+      .category-heading > p, .project-copy > p { font-size: 1.02rem; }
+      .equipment-summary h3 { font-size: 2rem; }
+      .equipment-summary > p { font-size: 1rem; }
+      .equipment-image, .equipment-image img { min-height: 370px; height: 370px; }
+      .equipment-visual--boiler .equipment-image,
+      .equipment-visual--boiler .equipment-image img { min-height: 390px; height: 390px; }
+      .equipment-visual--collector .equipment-image,
+      .equipment-visual--collector .equipment-image img { min-height: 450px; height: 450px; }
+      .equipment-photo, .equipment-photo img { min-height: 300px; height: 300px; }
+      .bath-support { grid-template-columns: 1fr; gap: 18px; }
+      .pool-photo { height: 300px; }
+      .projects { padding: 34px 0; }
+      .project-panel { min-height: 560px; align-items: end; padding: 24px; background-position: 42% center; }
+      .project-panel::before {
+        content: "";
+        position: absolute;
+        inset: 30% 0 0;
+        background: linear-gradient(180deg, transparent, rgba(3, 24, 37, .82));
+      }
+      .project-copy .btn { width: 100%; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="Kentsol, início">KENT<span>SOL</span></a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#banho">Banho</a>
+        <a href="#piscina">Piscinas</a>
+        <a href="#equipamentos">Equipamentos</a>
+        <a href="#projetos">Projetos</a>
+        <a href="sorteio.html">Sorteio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-copy">
+        <p class="eyebrow">Kentsol · Soluções para cada projeto</p>
+        <h1 id="hero-title">Soluções em aquecimento de água.</h1>
+        <p>Equipamentos e soluções para aquecimento de banho e piscina, com orientação técnica e projetos personalizados.</p>
+        <a class="hero-link" href="#banho">Explore nossas soluções</a>
+      </div>
+    </section>
+
+    <section id="banho" class="service-section" aria-labelledby="banho-title">
+      <div class="wrap">
+        <header class="category-heading">
+          <p class="eyebrow">01 / Aquecimento de banho</p>
+          <h2 id="banho-title">Aquecimento solar para banho.</h2>
+          <p>Água quente com eficiência, conforto e uma solução adequada às necessidades de cada projeto.</p>
+        </header>
+
+        <div class="equipment-list">
+          <article class="equipment-row">
+            <figure class="equipment-visual equipment-visual--boiler">
+              <div class="equipment-image">
+                <img class="boiler-artwork" src="images/Boiler-cutout.png" alt="Reservatório térmico comercializado pela Kentsol, recortado sem fundo" width="1449" height="743" fetchpriority="high">
+              </div>
+            </figure>
+            <div class="equipment-summary">
+              <p class="eyebrow">Reservatórios</p>
+              <h3>Reservatórios térmicos de baixa e alta pressão</h3>
+              <p>Modelos para diferentes configurações hidráulicas, selecionados conforme as características e necessidades do projeto.</p>
+            </div>
+          </article>
+
+          <article class="equipment-row equipment-row--reverse">
+            <figure class="equipment-visual equipment-visual--collector">
+              <div class="equipment-image">
+                <img class="collector-artwork" src="images/ColetorSolar-cutout.png" alt="Coletor solar térmico para aquecimento de água, recortado sem fundo" width="548" height="1013" loading="lazy" decoding="async">
+              </div>
+            </figure>
+            <div class="equipment-summary">
+              <p class="eyebrow">Energia solar</p>
+              <h3>Coletores solares de alta eficiência</h3>
+              <p>Captam a energia solar e a transferem para a água, integrando o sistema de aquecimento.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="bath-support">
+          <p><strong>Orientação técnica</strong>Suporte para ajudar na escolha dos equipamentos e na definição da solução mais adequada à instalação.</p>
+          <p><strong>Sistemas personalizados</strong>Configurações consideradas de acordo com a demanda de água quente e as características de cada projeto.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="piscina" class="service-section pool-section" aria-labelledby="piscina-title">
+      <div class="wrap">
+        <header class="category-heading">
+          <p class="eyebrow">02 / Energia solar</p>
+          <h2 id="piscina-title">Aquecedor solar de piscina.</h2>
+          <p>Mais conforto térmico para aproveitar melhor a piscina, com um sistema adequado às características de cada instalação.</p>
+        </header>
+        <div class="equipment-row">
+          <figure class="equipment-visual">
+            <div class="pool-photo">
+              <img src="images/AquecedorPisc.jpg" alt="Coletores solares instalados sobre telhado para aquecimento de piscina" width="1199" height="800" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="visual-caption">Coletores solares em uma instalação residencial.</figcaption>
+          </figure>
+          <div class="equipment-summary">
+            <p class="eyebrow">Componentes do sistema</p>
+            <h3>Circulação e interligação hidráulica</h3>
+            <p>Componentes que integram a circulação de água no sistema solar para piscina, conforme os requisitos do projeto.</p>
+          <div class="pool-list" aria-label="Componentes do sistema">
+            <p>Bombas circuladoras</p>
+            <p>Tubos e componentes hidráulicos</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipamentos" class="service-section electric-section" aria-labelledby="equipamentos-title">
+      <div class="wrap">
+        <header class="category-heading">
+          <p class="eyebrow">03 / Aquecimento de piscinas</p>
+          <h2 id="equipamentos-title">Aquecedores de piscina.</h2>
+          <p>Equipamentos para proporcionar mais conforto térmico e atender às necessidades de diferentes projetos de piscina.</p>
+        </header>
+        <article class="equipment-row">
+          <figure class="equipment-visual">
+            <div class="equipment-photo">
+              <img src="images/TrocadordeCalor.jpg" alt="Equipamento de aquecimento para piscina mostrado junto à água" width="1671" height="941" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="visual-caption">Equipamento apresentado no contexto de uma piscina.</figcaption>
+          </figure>
+          <div class="equipment-summary">
+            <p class="eyebrow">Equipamento para piscina</p>
+            <h3>Trocadores de calor</h3>
+            <p>Opção para aquecimento de piscinas. A configuração adequada é definida conforme as características da piscina e do projeto.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projetos" class="projects" aria-labelledby="projetos-title">
+      <div class="wrap">
+        <div class="project-panel">
+          <div class="project-copy">
+            <p class="eyebrow">Uma solução para cada obra</p>
+            <h2 id="projetos-title">Cada projeto tem suas particularidades.</h2>
+            <p>Orientação para encontrar a configuração adequada às necessidades do imóvel, da piscina ou da obra.</p>
+            <a class="btn" href="https://wa.me/?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento%20com%20a%20Kentsol." target="_blank" rel="noopener">Solicitar orçamento</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">KENT<span>SOL</span></div>
+      <div>Projetos e soluções em aquecimento de água para banho e piscina.</div>
+    </div>
+  </footer>
+</body>
+</html>
