@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="images/sections/HeroKentsolServi%C3%A7os.png" fetchpriority="high">
+  <link rel="preload" as="image" href="sections/HeroKentsolServi%C3%A7os.png" fetchpriority="high">
   <link rel="preload" as="image" href="images/brand/logos/LogoCompleta.png">
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js" fetchpriority="low" onerror="document.documentElement.classList.add('no-3d')"></script>
   <style>
@@ -137,7 +137,7 @@
       border-bottom: 1px solid rgba(255, 255, 255, .08);
       background:
         linear-gradient(90deg, rgba(1, 11, 18, .88) 0%, rgba(1, 11, 18, .72) 28%, rgba(1, 11, 18, .38) 100%),
-        url("images/sections/HeroKentsolServiços.png") center 46% / cover no-repeat,
+        url("sections/HeroKentsolServiços.png") center 46% / cover no-repeat,
         #010b12;
     }
     .cinematic-vignette {
@@ -476,7 +476,7 @@
       padding: clamp(28px, 5vw, 66px) clamp(24px, 4vw, 72px);
       background:
         linear-gradient(90deg, rgba(1, 24, 35, .78) 0%, rgba(1, 24, 35, .32) 42%, rgba(1, 24, 35, .08) 100%),
-        url("images/sections/pool.jpg") center 62% / cover no-repeat;
+        url("sections/pool.jpg") center 62% / cover no-repeat;
       border-radius: 0;
     }
     .project-copy {
@@ -647,9 +647,9 @@
           <article class="equipment-row equipment-row--reverse">
             <figure class="equipment-visual equipment-visual--collector">
               <div class="equipment-image">
-                <img class="collector-fallback" src="images/collector/ColetorSolarPisc.png" alt="" width="1448" height="1086" loading="lazy" decoding="async" aria-hidden="true">
+                <img class="collector-fallback" src="collector/ColetorSolarPisc.png" alt="" width="1448" height="1086" loading="lazy" decoding="async" aria-hidden="true">
                 <model-viewer id="collector-model" alt="Modelo 3D de um coletor solar térmico para aquecimento de água" camera-controls camera-orbit="180deg 75deg 105%" field-of-view="30deg" environment-image="neutral" skybox-angle="240.8deg" loading="lazy" reveal="auto" interaction-prompt="none">
-                  <img slot="poster" src="images/collector/ColetorSolarPisc.png" alt="" width="1448" height="1086" loading="lazy" decoding="async">
+                  <img slot="poster" src="collector/ColetorSolarPisc.png" alt="" width="1448" height="1086" loading="lazy" decoding="async">
                 </model-viewer>
               </div>
               <figcaption class="visual-caption visual-caption--3d">Arraste ou toque no modelo para explorar o coletor solar.</figcaption>
@@ -671,7 +671,7 @@
 
         <div class="bath-support">
           <figure class="bath-support-visual">
-            <img src="images/sections/Planejamento.png" alt="Notebook exibindo o planejamento de um sistema de aquecimento solar, com esquema técnico e anotações do projeto" width="1672" height="940" loading="lazy" decoding="async">
+            <img src="sections/Planejamento.png" alt="Notebook exibindo o planejamento de um sistema de aquecimento solar, com esquema técnico e anotações do projeto" width="1672" height="940" loading="lazy" decoding="async">
             <figcaption class="planning-overlay">
               <div class="planning-card planning-card--left">
                 <strong>Orientação técnica</strong>
@@ -697,7 +697,7 @@
         <div class="equipment-row">
           <figure class="equipment-visual">
             <div class="pool-photo">
-              <img src="images/collector/ColetorSolarPisc.png" alt="Coletores solares para aquecimento de piscina instalados sobre um telhado" width="1448" height="1086" loading="lazy" decoding="async">
+              <img src="collector/ColetorSolarPisc.png" alt="Coletores solares para aquecimento de piscina instalados sobre um telhado" width="1448" height="1086" loading="lazy" decoding="async">
             </div>
             <figcaption class="visual-caption">Coletores solares para piscina instalados sobre um telhado.</figcaption>
           </figure>
@@ -726,8 +726,8 @@
         <article class="equipment-row">
           <figure class="equipment-visual">
             <div class="equipment-photo equipment-photo--loading">
-              <img class="equipment-photo-poster" src="images/heat-pump/Trocador-poster.png" alt="" width="533" height="487" decoding="async">
-              <model-viewer id="heat-pump-model" src="images/heat-pump/Trocador.glb" alt="Modelo 3D interativo de um trocador de calor elétrico para piscina" camera-controls camera-orbit="0deg 70deg 115%" field-of-view="30deg" shadow-intensity="0.35" loading="lazy" reveal="auto" interaction-prompt="none">
+              <img class="equipment-photo-poster" src="heat-pump/Trocador-poster.png" alt="" width="533" height="487" decoding="async">
+              <model-viewer id="heat-pump-model" src="heat-pump/Trocador.glb" alt="Modelo 3D interativo de um trocador de calor elétrico para piscina" camera-controls camera-orbit="0deg 70deg 115%" field-of-view="30deg" shadow-intensity="0.35" loading="lazy" reveal="auto" interaction-prompt="none">
               </model-viewer>
             </div>
             <figcaption class="visual-caption visual-caption--3d">Arraste ou toque no modelo para explorar o trocador de calor.</figcaption>
@@ -837,21 +837,21 @@
           collector.setAttribute('src', window.collectorModelSrc);
         };
 
-        /* images/collector/ColetorModelData.js é carregado só quando a seção se aproxima da tela,
+        /* collector/ColetorModelData.js é carregado só quando a seção se aproxima da tela,
            para não bloquear a renderização inicial da página. */
         var started = false;
         var startCollector = function () {
           if (started) { return; }
           started = true;
           var script = document.createElement('script');
-          script.src = 'images/collector/ColetorModelData.js';
+          script.src = 'collector/ColetorModelData.js';
           script.onload = function () {
             if (window.customElements && customElements.whenDefined) {
               customElements.whenDefined('model-viewer').then(setupCollector);
             }
           };
           script.onerror = function () {
-            useStaticImage(collector, 'Não foi possível carregar images/collector/ColetorModelData.js; exibindo a imagem alternativa.');
+            useStaticImage(collector, 'Não foi possível carregar collector/ColetorModelData.js; exibindo a imagem alternativa.');
           };
           document.head.appendChild(script);
         };

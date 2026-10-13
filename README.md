@@ -16,9 +16,7 @@ O visualizador 3D de equipamentos e as fontes podem precisar de conexão com a i
 
 ## Organização dos arquivos visuais
 
-- `images/brand/logos/` — logotipos.
-- `images/heroes/` — imagens de destaque das páginas.
-- `images/sections/` — imagens de apoio e de seções.
-- `images/boiler/` — imagens do reservatório térmico.
-- `images/collector/` — imagens, modelo de origem e configurações do coletor solar.
-- `images/heat-pump/` — modelos e imagens do trocador de calor; `Trocador/` contém as texturas usadas pelo modelo OBJ.
+- `images/` — logotipos e imagens do reservatório térmico.
+- `sections/` — imagens de destaque e apoio das páginas.
+- `collector/` — imagens, modelo de origem e configurações do coletor solar.
+- `heat-pump/` — modelos e imagens do trocador de calor; `Trocador/` contém as texturas usadas pelo modelo OBJ.
