@@ -1,0 +1,69 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB48___Pl_stico_Preto_Fosco
+Ka 0.000000 0.000000 0.000000
+Kd 0.149020 0.149020 0.149020
+Ks 0.330000 0.330000 0.330000
+
+newmtl Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB48___Tela_Octogonal
+Ka 0.000000 0.000000 0.000000
+Kd 0.011765 0.011765 0.011765
+Ks 0.330000 0.330000 0.330000
+map_Kd Trocador/Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB48___Tela_Octogonal.png
+
+newmtl Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB48___Metal_Preto_Fosco
+Ka 0.000000 0.000000 0.000000
+Kd 0.152941 0.152941 0.152941
+Ks 0.330000 0.330000 0.330000
+
+newmtl Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB48___Painel_Controle
+Ka 0.000000 0.000000 0.000000
+Kd 0.560784 0.560784 0.560784
+Ks 0.330000 0.330000 0.330000
+map_Kd Trocador/Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB48___Painel_Controle.jpg
+
+newmtl Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB48___Pl_stico_Preto_Incolor
+Ka 0.000000 0.000000 0.000000
+Kd 0.074510 0.074510 0.074510
+Ks 0.330000 0.330000 0.330000
+d 0.100000
+
+newmtl Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB48___Pl_stico_Azul_Petr_leo_Fosco
+Ka 0.000000 0.000000 0.000000
+Kd 0.086275 0.109804 0.117647
+Ks 0.330000 0.330000 0.330000
+
+newmtl Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB24___Pl_stico_Azul_Petr_leo_Fosco
+Ka 0.000000 0.000000 0.000000
+Kd 0.086275 0.109804 0.117647
+Ks 0.330000 0.330000 0.330000
+
+newmtl Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB48___Mtela_Preto_Brilho
+Ka 0.000000 0.000000 0.000000
+Kd 0.211765 0.211765 0.211765
+Ks 0.330000 0.330000 0.330000
+
+newmtl Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB24___Mtela_Preto_Brilho
+Ka 0.000000 0.000000 0.000000
+Kd 0.215686 0.215686 0.215686
+Ks 0.330000 0.330000 0.330000
+
+newmtl Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB48___Grafismo
+Ka 0.000000 0.000000 0.000000
+Kd 0.600000 0.592157 0.184314
+Ks 0.330000 0.330000 0.330000
+map_Kd Trocador/Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB48___Grafismo.jpg
+
+newmtl Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB48___Grafismo1_
+Ka 0.000000 0.000000 0.000000
+Kd 0.600000 0.592157 0.184314
+Ks 0.330000 0.330000 0.330000
+map_Kd Trocador/Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB48___Grafismo1_.jpg
+
+newmtl Bomba_de_Calor_para_Piscina_e_SPA_Crosswind_RB24___Pl_stico_Branco_Incolor
+Ka 0.000000 0.000000 0.000000
+Kd 0.996078 0.972549 0.925490
+Ks 0.330000 0.330000 0.330000
+
