@@ -2,13 +2,14 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Kentsol | Participe do sorteio</title>
-  <meta name="description" content="Participe do sorteio da Kentsol, conheça nossas soluções e fale com um especialista.">
+  <meta name="description" content="Conheça as soluções Kentsol, veja o prêmio do sorteio e fale com um especialista.">
   <meta name="theme-color" content="#012F50">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="sections/HeroKentsol.webp" fetchpriority="high">
   <style>
     :root{
       --blue:#012F50;
@@ -47,7 +48,7 @@
     .footer-mark{width:30px;height:14px;opacity:.72}
     .footer-mark img{width:48px}
     .nav-links{display:flex;align-items:center;gap:24px}
-    .nav-links a{color:var(--white);font-size:.98rem;font-weight:700;text-decoration:none;text-shadow:0 1px 5px rgba(0,0,0,.65)}
+    .nav-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;color:var(--white);font-size:.98rem;font-weight:700;text-decoration:none;text-shadow:0 1px 5px rgba(0,0,0,.65)}
     .nav-links a:hover{text-decoration:underline;text-underline-offset:5px}
     a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
     .btn{
@@ -68,7 +69,7 @@
       position:relative;overflow:hidden;display:flex;align-items:center;
       min-height:100vh;min-height:100svh;color:var(--white);
       background-color:var(--blue);
-      background-image:linear-gradient(90deg,rgba(1,29,49,.94) 0%,rgba(1,47,80,.82) 54%,rgba(1,47,80,.5) 100%),url("sections/HeroKentsol.png");
+      background-image:linear-gradient(90deg,rgba(1,29,49,.94) 0%,rgba(1,47,80,.82) 54%,rgba(1,47,80,.5) 100%),url("sections/HeroKentsol.webp");
       background-size:cover;background-position:center 55%;
       padding:68px 0 72px;border-bottom:5px solid var(--orange);
     }
@@ -116,10 +117,12 @@
       .final-cta-inner{align-items:flex-start;flex-direction:column}
     }
     @media(max-width:560px){
-      .nav-inner{align-items:flex-start;flex-direction:column;justify-content:center;gap:12px;padding:15px 0}
+      .wrap{width:min(calc(100% - 32px - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px)),var(--wrap))}
+      .nav-inner{align-items:flex-start;flex-direction:column;justify-content:center;gap:12px;padding:15px 0;padding-top:max(15px,env(safe-area-inset-top,0px))}
       .nav-links{gap:18px;flex-wrap:wrap}
       .hero{min-height:100vh;min-height:100svh;padding:150px 0 48px;background-position:center}
-      footer .wrap{width:min(100% - 36px,1600px)}
+      footer .wrap{width:min(calc(100% - 36px - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px)),1600px)}
+      footer{padding-bottom:calc(22px + env(safe-area-inset-bottom,0px))}
       h1{font-size:38px}
       .hero p{font-size:1.08rem}
       .hero-actions,.hero-actions .btn{width:100%}
@@ -130,6 +133,10 @@
       .choice .btn{margin-top:4px}
       .final-cta h2{font-size:25px}
       .final-cta .btn{width:100%}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
     }
   </style>
 </head>
@@ -151,11 +158,11 @@
 <main id="conteudo">
   <section class="hero">
     <div class="wrap hero-content">
-      <div class="eyebrow">Aquecimento e conforto hidráulico</div>
-      <h1>Aquecimento e conforto para sua casa e seu projeto</h1>
-      <p>Conheça nossas soluções, fale com a equipe Kentsol ou participe do sorteio.</p>
+      <div class="eyebrow">Aquecimento solar e trocadores de calor</div>
+      <h1>Aquecimento de água para banho e piscina</h1>
+      <p>Conheça as soluções Kentsol, veja o sorteio ou fale com nossa equipe.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="sorteio.html">Participar do sorteio</a>
+        <a class="btn btn-primary" href="sorteio.html">Conhecer o sorteio</a>
         <a class="btn btn-outline" href="NossosServi%C3%A7os.html">Ver Serviços</a>
       </div>
     </div>
@@ -169,9 +176,9 @@
 
       <div class="choices">
         <article class="choice primary">
-          <h3>Participar do sorteio</h3>
-          <p>Concorra a um sistema de aquecimento solar para piscina de até 10 m².</p>
-          <a class="btn btn-primary" href="sorteio.html">Quero participar</a>
+          <h3>Conhecer o sorteio</h3>
+          <p>Veja o prêmio da campanha: aquecimento solar para piscina de até 10 m².</p>
+          <a class="btn btn-primary" href="sorteio.html">Ver o prêmio</a>
         </article>
 
         <article class="choice">
